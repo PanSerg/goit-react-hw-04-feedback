@@ -6,7 +6,7 @@ import { BtnOption } from "./button.styled";
 export const FeedbackOptions = ({ onLeaveReview, options }) => (
     <BtnOption>
         {options.map((option, index) => (
-            <ButtonFeedback type="button" onClick={onLeaveReview} key={index}>
+            <ButtonFeedback type="button" onClick={() => onLeaveReview(option)} key={index}>
                 {option}
             </ButtonFeedback>
         ))}
